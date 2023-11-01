@@ -1,4 +1,5 @@
 ## 获取币对名称数组
+
 - param
         'query MyQuery {
             pairs {
@@ -10,10 +11,12 @@
             }
             }
         }'
+
 ## 获取用户交易记录(分页)
+
 - 币对 California Carbon Allowance Vintage 2022 Future <> usdt
-    - California Carbon Allowance Vintage 2022 Future -> usdt
-       - query MyQuery {
+  - California Carbon Allowance Vintage 2022 Future -> usdt
+    - query MyQuery {
         swaps(
         skip: 0
         first: 10
@@ -26,9 +29,9 @@
         amount1Out
         timestamp
         }
-        } 
-    - usdt -> California Carbon Allowance Vintage 2022 Future 
-       - query MyQuery {
+        }
+  - usdt -> California Carbon Allowance Vintage 2022 Future
+    - query MyQuery {
         swaps(
         skip: 0
         first: 10
@@ -42,9 +45,9 @@
         timestamp
         }
         }
-- 币对 EUA Futures (Dec 2023) <> usdt 
-    - EUA Futures (Dec 2023) -> usdt 
-        - query MyQuery {
+- 币对 EUA Futures (Dec 2023) <> usdt
+  - EUA Futures (Dec 2023) -> usdt
+    - query MyQuery {
         swaps(
         skip: 0
         first: 10
@@ -58,8 +61,8 @@
         timestamp
         }
         }
-    - usdt -> EUA Futures (Dec 2023)
-      - query MyQuery {
+  - usdt -> EUA Futures (Dec 2023)
+    - query MyQuery {
         swaps(
         skip: 0
         first: 10
@@ -74,7 +77,7 @@
         }
         }
 - 用户自己
-    - California Carbon Allowance Vintage 2022 Future -> usdt
+  - California Carbon Allowance Vintage 2022 Future -> usdt
                 - ```
                         query MyQuery {
                         swaps(
@@ -91,8 +94,10 @@
                         }
                         }
                 ```
-    - usdt -> California Carbon Allowance Vintage 2022 Future 
-        - ```
+  - usdt -> California Carbon Allowance Vintage 2022 Future
+
+    - ```
+
         query MyQuery {
             swaps(
             skip: 0
@@ -108,8 +113,10 @@
         }
         }
         ```
-    - EUA Futures (Dec 2023) -> usdt 
-      - ```
+
+  - EUA Futures (Dec 2023) -> usdt
+
+    - ```
         query MyQuery {
             swaps(
             skip: 0
@@ -125,8 +132,11 @@
             }
             }
         ```
-    - usdt -> EUA Futures (Dec 2023)
-       - ```
+
+  - usdt -> EUA Futures (Dec 2023)
+
+    - ```
+
        query MyQuery {
         swaps(
         skip: 0
@@ -142,4 +152,3 @@
         }
         }
     ```
- 
