@@ -13,7 +13,7 @@
 ## 获取用户交易记录(分页)
 - 币对 California Carbon Allowance Vintage 2022 Future <> usdt
     - California Carbon Allowance Vintage 2022 Future -> usdt
-       query MyQuery {
+       - query MyQuery {
         swaps(
         skip: 0
         first: 10
@@ -26,9 +26,9 @@
         amount1Out
         timestamp
         }
-        }
+        } 
     - usdt -> California Carbon Allowance Vintage 2022 Future 
-        query MyQuery {
+       - query MyQuery {
         swaps(
         skip: 0
         first: 10
@@ -44,7 +44,7 @@
         }
 - 币对 EUA Futures (Dec 2023) <> usdt 
     - EUA Futures (Dec 2023) -> usdt 
-         query MyQuery {
+        - query MyQuery {
         swaps(
         skip: 0
         first: 10
@@ -59,7 +59,7 @@
         }
         }
     - usdt -> EUA Futures (Dec 2023)
-      query MyQuery {
+      - query MyQuery {
         swaps(
         skip: 0
         first: 10
