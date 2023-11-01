@@ -1,5 +1,5 @@
 ## 获取币对名称数组
-
+```
 - param
         'query MyQuery {
             pairs {
@@ -11,12 +11,13 @@
             }
             }
         }'
-
+```
 ## 获取用户交易记录(分页)
 
 - 币对 California Carbon Allowance Vintage 2022 Future <> usdt
   - California Carbon Allowance Vintage 2022 Future -> usdt
-    - query MyQuery {
+     ```
+     query MyQuery {
         swaps(
         skip: 0
         first: 10
@@ -30,8 +31,10 @@
         timestamp
         }
         }
+    ```
   - usdt -> California Carbon Allowance Vintage 2022 Future
-    - query MyQuery {
+     ```
+     query MyQuery {
         swaps(
         skip: 0
         first: 10
@@ -45,9 +48,11 @@
         timestamp
         }
         }
+    ```
 - 币对 EUA Futures (Dec 2023) <> usdt
   - EUA Futures (Dec 2023) -> usdt
-    - query MyQuery {
+     ```
+     query MyQuery {
         swaps(
         skip: 0
         first: 10
@@ -61,8 +66,10 @@
         timestamp
         }
         }
+    ```
   - usdt -> EUA Futures (Dec 2023)
-    - query MyQuery {
+     ```
+    query MyQuery {
         swaps(
         skip: 0
         first: 10
@@ -76,27 +83,28 @@
         timestamp
         }
         }
+    ```
 - 用户自己
   - California Carbon Allowance Vintage 2022 Future -> usdt
-                - ```
-                        query MyQuery {
-                        swaps(
-                            skip: 0
-                            first: 10
-                            where: {pair_: {id: "0xa58ca32b40de2d1be8818968a58182ee86b2df7a"}, amount1In_gt: "0", sender: "0x8f35eb07eb0d28ce75f5fa62cab367e74d084df6"}
-                        ) {
-                            sender
-                            amount0In
-                            amount0Out
-                            amount1In
-                            amount1Out
-                            timestamp
-                        }
-                        }
-                ```
+     ```
+            query MyQuery {
+                swaps(
+                skip: 0
+                first: 10
+                where: {pair_: {id: "0xa58ca32b40de2d1be8818968a58182ee86b2df7a"}, amount1In_gt: "0", sender: "0x8f35eb07eb0d28ce75f5fa62cab367e74d084df6"}
+                ) {
+                    sender
+                    amount0In
+                    amount0Out
+                    amount1In
+                    amount1Out
+                    timestamp
+                }
+                }
+        ```
   - usdt -> California Carbon Allowance Vintage 2022 Future
 
-    - ```
+     ```
 
         query MyQuery {
             swaps(
@@ -116,7 +124,7 @@
 
   - EUA Futures (Dec 2023) -> usdt
 
-    - ```
+     ```
         query MyQuery {
             swaps(
             skip: 0
@@ -135,7 +143,7 @@
 
   - usdt -> EUA Futures (Dec 2023)
 
-    - ```
+     ```
 
        query MyQuery {
         swaps(
